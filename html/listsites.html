@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>List Websites</title>
+  <style>
+    body {
+      background-color: black;
+    }
+    .jumbotron {
+      padding-left: 50px;
+      padding-right: 50px;
+      text-align: center;
+      width: 400px;
+    }
+    .container {
+      padding-top: 20px;
+      padding-bottom: 25px;
+      padding-left: 25px;
+      padding-right: 25px;
+      border-radius: 25px;
+      margin-top: 10px;
+      width: 450px;
+    }
+  </style>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">KubeDeploy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <a class="nav-link" href="/add">Create Site</a>
+      <a class="nav-link" href="/list">List Sites</a>
+    </ul>
+  </div>
+</nav>
+  </head>
+  <div class="container bg-dark">
+  <body>
+      <ul>
+            {{range .Sites}}
+            <li>{{.}}</li>
+            {{end}}
+      </ul>
+    
+  </body>
+    </div>
+</html>
